@@ -20,17 +20,16 @@ textarea {
   color: #000;
 }
 
-/* Set Google Font */
-body {
-  font-family: "Roboto", sans-serif; /* Example Google Font */
-}
-
 /* Set body background */
 body {
   background-image: url("/static/images/bg-body.png");
   background-size: cover;
   background-position: center;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  margin: 0; /* Remove default margin */
 }
+
 
 /* Customize navigation */
 nav {
