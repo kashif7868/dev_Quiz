@@ -1,0 +1,184 @@
+/* Reset default settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font color for specific elements */
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+p,
+textarea {
+  color: #000;
+}
+
+/* Set Google Font */
+body {
+  font-family: "Roboto", sans-serif; /* Example Google Font */
+}
+
+/* Set body background */
+body {
+  background-image: url("/static/images/bg-body.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Customize navigation */
+nav {
+  background-color: #18354c;
+  color: #fff;
+}
+
+nav a img {
+  width: 20%;
+}
+
+.main-btn {
+  position: relative;
+  left: 198px;
+}
+
+.githubBtn {
+  display: flex;
+  background-color: rgb(24, 23, 23);
+  color: #ffffff;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: 0.6s ease, transform 0.3s ease; /* Added transform to transition */
+}
+
+.githubBtn:hover {
+  box-shadow: none;
+  transform: translateY(-5px); /* Slightly lift the button */
+}
+
+.githubBtn svg {
+  height: 30px;
+  padding: 0px 10px;
+  transition: transform 0.3s ease; /* Smoothly animate SVG transformation */
+}
+
+.githubBtn:hover svg {
+  transform: scale(1.1); /* Scale up the SVG on hover */
+}
+
+/* Logout */
+.Btn {
+  --black: #000000;
+  --ch-black: #141414;
+  --eer-black: #1b1b1b;
+  --night-rider: #2e2e2e;
+  --white: #ffffff;
+  --af-white: #f3f3f3;
+  --ch-white: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 37px;
+  height: 42px;
+  border: none;
+  border-radius: 5px;
+  margin: 0rem 0.6rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: var(--af-white);
+}
+
+/* plus sign */
+.lougout-sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lougout-sign svg {
+  width: 17px;
+}
+
+.lougout-sign svg path {
+  fill: var(--night-rider);
+}
+
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: var(--night-rider);
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .lougout-sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+
+/* button click effect */
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+
+#mobile-menu {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  z-index: 999;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+}

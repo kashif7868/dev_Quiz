@@ -1,0 +1,215 @@
+/* Background container */
+.bg-container {
+ background-image: url("/static/images/bg.jpg");
+ background-size: cover;
+ background-position: center;
+ height: 400px;
+ display: grid;
+ place-items: center;
+ color: white;
+ padding: 20px;
+ box-sizing: border-box;
+ width: 100%;
+ max-width: 100vw;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-small-container {
+ background-color: rgb(0 28 36 / 50%);
+ width: 80%;
+ padding: 4rem;
+ border-radius: 15px;
+ text-align: center;
+ box-shadow: 0 14px 31px rgb(1 155 201 / 70%);
+}
+
+.bg-small-container:hover {
+ background-color: rgb(25 106 129 / 50%);
+ box-shadow: 0 14px 31px rgb(16 255 189);
+ transition: all ease-in-out 0.3s;
+}
+
+.bg-small-container h1 {
+ font-size: 3.5rem;
+ font-weight: bold;
+ margin-bottom: 25px;
+}
+
+.bg-small-container p {
+ font-size: 1.2rem;
+ margin-bottom: 30px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+ .bg-container {
+    height: auto; /* Adjust height for smaller screens */
+ }
+
+ .bg-small-container {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 2rem; /* Reduce padding for smaller screens */
+ }
+
+ .bg-small-container h1 {
+    font-size: 2.5rem; /* Decrease font size for smaller screens */
+ }
+
+ .bg-small-container p {
+    font-size: 1rem; /* Decrease font size for smaller screens */
+ }
+}
+
+/* ************************************* */
+/* ******Programing Quiz Container****** */
+/* ************************************ */
+/* Space between list items */
+ul.space-y-4 {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+ }
+ 
+ .pg-container {
+  display: flex;
+  width: 87%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 4rem 5rem;
+ }
+ 
+ ul.space-y-4 li {
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Added transform transition */
+  background-color: #0a4f81d9; /* Applied background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Initial box shadow */
+  padding: 2rem;
+ }
+ 
+ /* Link styles */
+ ul.space-y-4 li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none; /* Removed underline */
+  transition: color 0.3s ease;
+ }
+ 
+ ul.space-y-4 li a img {
+  width: 50%;
+ }
+ 
+ ul.space-y-4 li:hover {
+  color: #f8f9fa; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.05); 
+ }
+ 
+ @media (max-width: 768px) {
+  .bg-container {
+     height: 300px; 
+  }
+ 
+  .bg-container h1 {
+     font-size: 2.5rem;
+  }
+ 
+  .bg-container p {
+     font-size: 1rem; 
+  }
+  .pg-container {
+     margin: 4rem 1rem;
+  }
+ }
+ 
+
+
+
+
+
+
+/* ***************** */
+/* ******blog Container****** */
+/* ***************** */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 2rem 76px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; 
+  background-color: #0a4f81d9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-contant,
+.blog-co-img {
+  width: 100%;
+  padding: 20px;
+}
+
+.blog-contant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.blog-co-img img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Added transition for smooth zoom effect */
+ }
+ 
+ .blog-co-img img:hover {
+  transform: scale(1.1); /* Zoom in effect on hover */
+ }
+ 
+
+.blog-contant h1,
+.blog-contant p {
+  margin-bottom: 20px;
+}
+
+.blog-contant a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  list-style: none;
+}
+
+.blog-contant a:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+.blog-contant a:active {
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .blog-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .blog-contant {
+    width: 50%;
+    text-align: left;
+  }
+
+  .blog-co-img {
+    width: 50%;
+  }
+}

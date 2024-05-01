@@ -1,0 +1,132 @@
+{% extends 'base.html' %} 
+{% block title %}Home | Developer Programming Quiz{% endblock %} {% block content %}
+<div class="bg-container">
+  <div class="bg-small-container">
+    <h1 class="text-3xl text-white font-bold mb-4">Welcome to Developer Quiz</h1>
+    <p class="mb-4 text-white">
+      Select the programming language you want to take the quiz on:
+    </p>
+  </div>
+</div>
+
+<div class="pg-container">
+  <ul class="space-y-4">
+    <li>
+      <a
+        href="{% url 'python_quiz' %}"
+        class="flex items-center text-blue-500 hover:underline"
+      >
+        <img
+          src="/static/images/pgImages/python.png"
+          alt="python image"
+          class="python"
+        />
+        Python
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'java_quiz' %}" class="text-blue-500 hover:underline">
+        <img
+          src="/static/images/pgImages/java.png"
+          alt="java image"
+          class="java"
+        />
+        Java</a
+      >
+    </li>
+    <li>
+      <a href="{% url 'cplus_quiz' %}" class="text-blue-500 hover:underline">
+        <img
+          src="/static/images/pgImages/c-plus.png"
+          alt="c++ image"
+          class="c-plus"
+        />
+        C++</a
+      >
+    </li>
+    <li>
+      <a href="{% url 'javas_quiz' %}" class="text-blue-500 hover:underline"
+        ><img
+          src="/static/images/pgImages/javascript.png"
+          alt="javascript image"
+          class="javascript"
+        />JavaScript</a
+      >
+    </li>
+    <li>
+      <a href="{% url 'cshark_quiz' %}" class="text-blue-500 hover:underline"
+        ><img
+          src="/static/images/pgImages/c-sharp.png"
+          alt="c-sharp image"
+          class="c-sharp"
+        />C#</a
+      >
+    </li>
+    <li>
+      <a href="{% url 'ruby_quiz' %}" class="text-blue-500 hover:underline"
+        ><img
+          src="/static/images/pgImages/ruby.png"
+          alt="ruby image"
+          class="ruby"
+        />Ruby</a
+      >
+    </li>
+    <li>
+      <a href="{% url 'swift_quiz' %}" class="text-blue-500 hover:underline"
+        ><img
+          src="/static/images/pgImages/swift.png"
+          alt="swift image"
+          class="c-sharp"
+        />Swift</a
+      >
+    </li>
+    <li>
+      <a href="{% url 'kotlin_quiz' %}" class="text-blue-500 hover:underline"
+        ><img
+          src="/static/images/pgImages/kotlin.png"
+          alt="Kotlin image"
+          class="Kotlin"
+        />Kotlin</a
+      >
+    </li>
+    <li>
+      <a href="{% url 'go_quiz' %}" class="text-blue-500 hover:underline"
+        ><img
+          src="/static/images/pgImages/go.png"
+          alt="go image"
+          class="go"
+        />Go</a
+      >
+    {% comment %} </li>
+    <li>
+      <a href="{% url 'fsharp_quiz' %}" class="text-blue-500 hover:underline"
+        ><img
+          src="/static/images/pgImages/f-sharp.png"
+          alt="fsharp_quiz image"
+          class="fsharp_quiz"
+        />F#</a
+      >
+    </li>  {% endcomment %}
+  </ul>
+</div> 
+
+{% comment %} Blog Container {% endcomment %}
+<div class="blog-container">
+  <div  class ="blog-contant">
+   <h1 class="text-3xl text-white font-bold mb-4">Blog Programming</h1>
+   <p class="mb-4 text-white text-justify">
+     Welcome to the world of programming! Whether you're a seasoned developer or just starting your coding journey, Developer Quiz is here to guide you through the vast landscape of programming languages.
+     Programming is more than just writing lines of code; it's a creative process that empowers you to build solutions to real-world problems. From web development to mobile apps, artificial intelligence to game design, the possibilities are endless.
+     At Developer Quiz, we believe in the power of knowledge. That's why we offer quizzes on a wide range of programming languages, including Python, Java, C++, JavaScript, and more. Our quizzes cover everything from basic syntax to advanced concepts, helping you deepen your understanding and sharpen your skills.
+     Whether you're looking to learn a new language, prepare for a job interview, or simply test your knowledge, Developer Quiz has something for everyone. Our platform provides a fun and interactive way to learn, with instant feedback and detailed explanations for each question.
+     So why wait? Dive into the world of programming with Developer Quiz and unlock your full potential as a developer. Join our community of learners, challenge yourself with quizzes, and embark on an exciting journey of discovery and growth.
+     Ready to take the first step? Choose your programming language, start the quiz, and let the learning begin!
+   </p>
+   <a href="{%url 'blog_programming'%}" class="text-blue-500 hover:underline">More Read</a>
+ </div>
+  <div  class ="blog-co-img">
+   <img src="/static/images/ab-1.jpg" alt="blog  image" class="blog" />
+ </div>
+ </div>
+
+{% endblock %}

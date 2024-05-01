@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title %} Signup {% endblock title %}
+{% block content %}
+<div class="form-container ">
+  <h2 class="text-2xl text-white font-bold mb-4 text-center">Sign Up</h2>
+  <!-- Error message container -->
+  {% if form.errors %}
+  <div
+    class="error-message bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+    role="alert"
+  >
+    {% for field, error in form.errors.items %}
+    <strong class="font-bold">{{ field }}:</strong> {{ error }} {% endfor %}
+  </div>
+  {% endif %}
+
+  <form class="form" method="post">
+    {% csrf_token %} {% for field in form %}
+    <div class="input-group">
+      <label
+        class="block text-white text-sm font-bold mb-2"
+        for="{{ field.id_for_label }}"
+      >
+        {{ field.label }}
+      </label>
+      {{ field }}
+    </div>
+    {% endfor %}
+    <button
+      type="submit"
+      class="sign bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      Sign Up
+    </button>
+  </form>
+</div>
+{% endblock content %}
